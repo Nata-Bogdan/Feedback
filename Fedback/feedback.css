@@ -1,0 +1,143 @@
+body {
+    display: grid;
+    justify-content: center;
+    font-family: Arial, sans-serif; /* Использование стандартного шрифта */
+    background-color: #f4f4f4; /* Фоновый цвет для страницы */
+    margin: 0;
+    padding: 20px; /* Отступы вокруг страницы */
+}
+
+.feedback {
+    display: flex;
+    justify-content: center;
+    font-size: 3rem;
+    text-align: center; /* Центрирование заголовка */
+    margin-bottom: 30px; /* Отступ снизу */
+}
+
+h1 {
+    display: flex;
+    color: #333; /* Цвет заголовка */
+}
+
+fieldset {
+    border: 1px solid #ccc; /* Цвет границы поля */
+    border-radius: 5px; /* Скругление углов поля */
+    margin: 20px 0; /* Отступы сверху и снизу */
+    padding: 20px; /* Внутренние отступы */
+    background-color: #fff; /* Белый фон для поля */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Легкая тень для поля */
+}
+
+.grade {
+    display: flex; /* Расположение оценок в строку */
+    justify-content: space-around; /* Выравнивание элементов по ширине */
+    margin-bottom: 20px; /* Отступ снизу для оценок */
+}
+
+.rounds {
+    text-indent: 140px;
+    display: flex;
+    margin-left: 200px;
+    size: 30px;
+}
+
+.rounds input {
+    margin-right: 15px; /* Отступ между радиокнопками */
+}
+
+.text p {
+    margin: 0; /* Удаление отступов у текста */
+    padding-right: 10px; /* Отступ справа */
+    font-weight: bold; /* Жирный шрифт для текста предмета */
+    color: #555; /* Цвет текста предмета */
+}
+
+.commentary-container {
+    display: flex;
+    margin-top: 20px; /* Отступ сверху для контейнера комментариев */
+    flex-direction: column; /* Вертикальное расположение элементов */
+    align-items: left; /* Центрирование содержимого по горизонтали */
+    max-width: 100%; /* Максимальная ширина для улучшения дизайна */
+    padding: 20px; /* Внутренние отступы */
+    background-color: #fff; /* Белый фон для контейнера */
+    border: 1px solid #ccc; /* Цвет границы контейнера */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Легкая тень для создания эффекта поднятия */
+}
+
+.commentary {
+    margin-top: 10px; /* Отступ между меткой и текстовым полем */
+    width: 100%; /* Ширина текстового поля */
+    font-size: 1rem; /* Размер шрифта текстового поля */
+    padding: 10px; /* Внутренние отступы */
+    border: 1px solid #ccc; /* Цвет границы текстового поля */
+    resize: none; /* Запрет изменения размера текстового поля */
+    border-radius: 4px; /* Скругленные углы для текстового поля */
+}
+
+/* Стили для кнопки */
+.submit-button {
+    margin-top: 20px; /* Отступ сверху для кнопки */
+    padding: 15px 35px; /* Отступы внутри кнопки */
+    font-size: 24px; /* Размер шрифта кнопки */
+    font-weight: bold; /* Жирный шрифт */
+    background-color: #28a745; /* Зеленый фон кнопки */
+    color: white; /* Белый цвет текста */
+    border: none; /* Без границы */
+    border-radius: 10px; /* Скругленные углы */
+    cursor: pointer; /* Курсор при наведении */
+    transition: background-color 0.3s ease; /* Плавный переход цвета */
+}
+
+.submit-button:hover {
+    background-color: #218838; /* Более темный зеленый фон при наведении */
+}
+
+.text {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    width: 100px;
+    font-size: 2rem;
+    text-indent: 20px;
+    color: rgb(117, 113, 113);
+}
+
+:root {
+    --radio-border-color: #000000;
+    --radio-checked-color: #000000;
+    --radio-size: 50px;
+    --radio-inner-size: 34px;
+}
+
+input[type="radio"] {
+    -webkit-appearance: none; /* Remove default styling in WebKit browsers */
+    appearance: none; /* Remove default styling */
+    width: var(--radio-size); /* Custom width */
+    height: var(--radio-size); /* Custom height */
+    border: 2.7px solid var(--radio-border-color); /* Custom border */
+    border-radius: 50%; /* Make it circular */
+    outline: none; /* Remove outline */
+    cursor: pointer; /* Change cursor on hover */
+    position: relative; /* Position for pseudo-element */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    margin-right: 60px; /* Добавляем отступ справа */
+}
+
+input[type="radio"]:hover {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+    border-color: var(--radio-checked-color); /* Change border color on hover */
+}
+
+input[type="radio"]:checked::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: var(--radio-inner-size); /* Inner circle size */
+    height: var(--radio-inner-size); /* Inner circle size */
+    border-radius: 50%; /* Make inner circle circular */
+    background-color: var(--radio-checked-color); /* Color of the checked state */
+    transform: translate(-50%, -50%); /* Center the inner circle */
+    
+}

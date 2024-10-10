@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="feedback.css">
+
+    <script>
+        function submitFeedback(event) {
+            event.preventDefault(); // Отменяем стандартное поведение формы
+            window.location.href = 'thankyou.html'; // Переход на страницу благодарности
+        }
+    </script>
+</head>
+<body>
+    <div class="feedback">
+        <h1>Feedback</h1>
+    </div>
+
+    <div class="grade">
+        <p></p>
+        <p>Very Poor</p>
+        <p>Poor</p>
+        <p>Neutral</p>
+        <p>Good</p>
+        <p>Excellent</p>
+    </div>
+
+    <form onsubmit="submitFeedback(event)"> <!-- Обработка отправки формы -->
+
+        <div>
+        <fieldset>
+            <div style="display: flex; align-items: center;">
+                <div class="text">
+                    <p>Math</p>
+                </div>
+                <div class="rounds">
+                    <input type="radio" id="math_very_poor" name="math_grade" value="very_poor">
+                    <input type="radio" id="math_poor" name="math_grade" value="poor">
+                    <input type="radio" id="math_neutral" name="math_grade" value="neutral">
+                    <input type="radio" id="math_good" name="math_grade" value="good">
+                    <input type="radio" id="math_excellent" name="math_grade" value="excellent">
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <div style="display: flex; align-items: center;">
+                <div class="text">
+                    <p>English</p>
+                </div>
+                <div class="rounds">
+                    <input type="radio" id="eng_very_poor" name="eng_grade" value="very_poor">
+                    <input type="radio" id="eng_poor" name="eng_grade" value="poor">
+                    <input type="radio" id="eng_neutral" name="eng_grade" value="neutral">
+                    <input type="radio" id="eng_good" name="eng_grade" value="good">
+                    <input type="radio" id="eng_excellent" name="eng_grade" value="excellent">
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <div style="display: flex; align-items: center;">
+                <div class="text">
+                    <p>PE</p>
+                </div>
+                <div class="rounds">
+                    <input type="radio" id="pe_very_poor" name="pe_grade" value="very_poor">
+                    <input type="radio" id="pe_poor" name="pe_grade" value="poor">
+                    <input type="radio" id="pe_neutral" name="pe_grade" value="neutral">
+                    <input type="radio" id="pe_good" name="pe_grade" value="good">
+                    <input type="radio" id="pe_excellent" name="pe_grade" value="excellent">
+                </div>
+            </div>
+        </fieldset>
+
+        <div class="commentary-container">
+            <label class="lol" for="commentary">Your commentary (not necessarily):</label>
+            <textarea id="commentary" class="commentary" rows="5" placeholder="your opinion..."></textarea>
+        </div>
+
+        <button type="submit" class="submit-button">
+            Submit
+        </button> <!-- Кнопка отправки -->
+
+    </form>
+</body>
+</html>
