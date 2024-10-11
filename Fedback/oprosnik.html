@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feedback Form</title>
     <link rel="stylesheet" href="feedback.css">
+    <title>Feedback Form</title>
 
     <script>
         function submitFeedback(event) {
@@ -13,76 +13,85 @@
         }
     </script>
 </head>
+
+
+
 <body>
     <div class="feedback">
         <h1>Feedback</h1>
     </div>
 
-    <div class="grade">
-        <p></p>
-        <p>Very Poor</p>
-        <p>Poor</p>
-        <p>Neutral</p>
-        <p>Good</p>
-        <p>Excellent</p>
-    </div>
-
     <form onsubmit="submitFeedback(event)"> <!-- Обработка отправки формы -->
 
+        <div class="user_data">
+            ya znayu gde ti zivesh
+        </div>
+    
         <div>
-        <fieldset>
-            <div style="display: flex; align-items: center;">
-                <div class="text">
-                    <p>Math</p>
+            <div class="container">
+                <div class="rate">
+                    <div>terrible</div>
+                    <div>poor</div>
+                    <div>average</div>
+                    <div>great</div>
+                    <div>exellent</div>
                 </div>
-                <div class="rounds">
-                    <input type="radio" id="math_very_poor" name="math_grade" value="very_poor">
-                    <input type="radio" id="math_poor" name="math_grade" value="poor">
-                    <input type="radio" id="math_neutral" name="math_grade" value="neutral">
-                    <input type="radio" id="math_good" name="math_grade" value="good">
-                    <input type="radio" id="math_excellent" name="math_grade" value="excellent">
+
+                <div class="courses">
+                    <div>MATH</div>
+                    <div>HISTORY</div>
+                    <div>Course_1</div>
+                    <div>Course_2</div>
+                    <div>Course_3</div>
+                </div>
+
+                <div class="radio">
+                    <!-- MATH -->
+                        <input type="radio" name="math">
+                        <input type="radio" name="math">
+                        <input type="radio" name="math">
+                        <input type="radio" name="math">
+                        <input type="radio" name="math">
+
+                    <!-- HISTORY -->
+                        <input type="radio" name="history">
+                        <input type="radio" name="history">
+                        <input type="radio" name="history">
+                        <input type="radio" name="history">
+                        <input type="radio" name="history">
+
+                    <!-- Course_1 -->
+                        <input type="radio" name="1">
+                        <input type="radio" name="1">
+                        <input type="radio" name="1">
+                        <input type="radio" name="1">
+                        <input type="radio" name="1">
+
+                    <!-- Course_2 -->
+                        <input type="radio" name="2">
+                        <input type="radio" name="2">
+                        <input type="radio" name="2">
+                        <input type="radio" name="2">
+                        <input type="radio" name="2">
+
+                    <!-- Course_3 -->
+                        <input type="radio" name="3">
+                        <input type="radio" name="3">
+                        <input type="radio" name="3">
+                        <input type="radio" name="3">
+                        <input type="radio" name="3">
                 </div>
             </div>
-        </fieldset>
+        </div>
 
-        <fieldset>
-            <div style="display: flex; align-items: center;">
-                <div class="text">
-                    <p>English</p>
-                </div>
-                <div class="rounds">
-                    <input type="radio" id="eng_very_poor" name="eng_grade" value="very_poor">
-                    <input type="radio" id="eng_poor" name="eng_grade" value="poor">
-                    <input type="radio" id="eng_neutral" name="eng_grade" value="neutral">
-                    <input type="radio" id="eng_good" name="eng_grade" value="good">
-                    <input type="radio" id="eng_excellent" name="eng_grade" value="excellent">
-                </div>
-            </div>
-        </fieldset>
-
-        <fieldset>
-            <div style="display: flex; align-items: center;">
-                <div class="text">
-                    <p>PE</p>
-                </div>
-                <div class="rounds">
-                    <input type="radio" id="pe_very_poor" name="pe_grade" value="very_poor">
-                    <input type="radio" id="pe_poor" name="pe_grade" value="poor">
-                    <input type="radio" id="pe_neutral" name="pe_grade" value="neutral">
-                    <input type="radio" id="pe_good" name="pe_grade" value="good">
-                    <input type="radio" id="pe_excellent" name="pe_grade" value="excellent">
-                </div>
-            </div>
-        </fieldset>
-
-        <div class="commentary-container">
+        <div class="commentary_container">
             <label class="lol" for="commentary">Your commentary (not necessarily):</label>
             <textarea id="commentary" class="commentary" rows="5" placeholder="your opinion..."></textarea>
         </div>
 
-        <button type="submit" class="submit-button">
+        <button type="submit" class="submit_button">
             Submit
-        </button> <!-- Кнопка отправки -->
+        </button>
 
     </form>
 </body>
