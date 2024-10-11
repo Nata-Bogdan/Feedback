@@ -1,113 +1,84 @@
 body {
     display: grid;
     justify-content: center;
-    font-family: Arial, sans-serif; /* Использование стандартного шрифта */
-    background-color: #f4f4f4; /* Фоновый цвет для страницы */
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
     margin: 0;
-    padding: 20px; /* Отступы вокруг страницы */
+    padding: 20px;
 }
 
 .feedback {
     display: flex;
     justify-content: center;
     font-size: 3rem;
-    text-align: center; /* Центрирование заголовка */
-    margin-bottom: 30px; /* Отступ снизу */
-}
-
-h1 {
-    display: flex;
-    color: #333; /* Цвет заголовка */
-}
-
-fieldset {
-    border: 1px solid #ccc; /* Цвет границы поля */
-    border-radius: 5px; /* Скругление углов поля */
-    margin: 20px 0; /* Отступы сверху и снизу */
-    padding: 20px; /* Внутренние отступы */
-    background-color: #fff; /* Белый фон для поля */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Легкая тень для поля */
-}
-
-.grade {
-    display: flex; /* Расположение оценок в строку */
-    justify-content: space-around; /* Выравнивание элементов по ширине */
-    margin-bottom: 20px; /* Отступ снизу для оценок */
-}
-
-.rounds {
-    text-indent: 140px;
-    display: flex;
-    margin-left: 200px;
-    size: 30px;
-}
-
-.rounds input {
-    margin-right: 15px; /* Отступ между радиокнопками */
-}
-
-.text p {
-    margin: 0; /* Удаление отступов у текста */
-    padding-right: 10px; /* Отступ справа */
-    font-weight: bold; /* Жирный шрифт для текста предмета */
-    color: #555; /* Цвет текста предмета */
-}
-
-.commentary-container {
-    display: flex;
-    margin-top: 20px; /* Отступ сверху для контейнера комментариев */
-    flex-direction: column; /* Вертикальное расположение элементов */
-    align-items: left; /* Центрирование содержимого по горизонтали */
-    max-width: 100%; /* Максимальная ширина для улучшения дизайна */
-    padding: 20px; /* Внутренние отступы */
-    background-color: #fff; /* Белый фон для контейнера */
-    border: 1px solid #ccc; /* Цвет границы контейнера */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Легкая тень для создания эффекта поднятия */
-}
-
-.commentary {
-    margin-top: 10px; /* Отступ между меткой и текстовым полем */
-    width: 100%; /* Ширина текстового поля */
-    font-size: 1rem; /* Размер шрифта текстового поля */
-    padding: 10px; /* Внутренние отступы */
-    border: 1px solid #ccc; /* Цвет границы текстового поля */
-    resize: none; /* Запрет изменения размера текстового поля */
-    border-radius: 4px; /* Скругленные углы для текстового поля */
-}
-
-/* Стили для кнопки */
-.submit-button {
-    margin-top: 20px; /* Отступ сверху для кнопки */
-    padding: 15px 35px; /* Отступы внутри кнопки */
-    font-size: 24px; /* Размер шрифта кнопки */
-    font-weight: bold; /* Жирный шрифт */
-    background-color: #28a745; /* Зеленый фон кнопки */
-    color: white; /* Белый цвет текста */
-    border: none; /* Без границы */
-    border-radius: 10px; /* Скругленные углы */
-    cursor: pointer; /* Курсор при наведении */
-    transition: background-color 0.3s ease; /* Плавный переход цвета */
-}
-
-.submit-button:hover {
-    background-color: #218838; /* Более темный зеленый фон при наведении */
-}
-
-.text {
-    display: flex;
     text-align: center;
-    align-items: center;
-    width: 100px;
-    font-size: 2rem;
-    text-indent: 20px;
-    color: rgb(117, 113, 113);
+    color: #333;
 }
+
+
+/* USER DATA BLOCK */
+.user_data {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 25px 10px 25px 10px;
+    margin-top: 50px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* COURSES RATING BLOCK */
+.container {
+    display: grid;
+    width: 50rem;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 25px 30px 25px 10px;
+    margin-top: 30px;
+    grid-template-rows: 5rem repeat(5, 7rem);
+    grid-template-columns: 1fr 3fr;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.rate {
+    display: grid;
+    grid-row: 1;
+    grid-column: 2;
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
+    align-items: center;
+    font-size: large;
+    font-weight: bold;
+    font-variant: small-caps;
+}
+
+.courses {
+    display: grid;
+    grid-area: 2 / 1 / 7 / 1;
+    grid-template-rows: repeat(5, 1fr);
+    justify-content: center;
+    align-items: center;
+    border-right: 3px solid #333;
+    font-size: 24px;
+    font-weight: bold;
+    font-variant: small-caps;
+}
+
+.radio {
+    display: grid;
+    grid-area: 2 / 2 / 7 / 2;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    justify-items: center;
+    align-items: center;
+} 
 
 :root {
-    --radio-border-color: #000000;
-    --radio-checked-color: #000000;
-    --radio-size: 50px;
-    --radio-inner-size: 34px;
+    --radio-border-color: #656565;
+    --radio-checked-color: #333;
+    --radio-size: 26px;
+    --radio-inner-size: 12px;
 }
 
 input[type="radio"] {
@@ -121,11 +92,10 @@ input[type="radio"] {
     cursor: pointer; /* Change cursor on hover */
     position: relative; /* Position for pseudo-element */
     transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
-    margin-right: 60px; /* Добавляем отступ справа */
 }
 
 input[type="radio"]:hover {
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
     border-color: var(--radio-checked-color); /* Change border color on hover */
 }
 
@@ -140,4 +110,62 @@ input[type="radio"]:checked::before {
     background-color: var(--radio-checked-color); /* Color of the checked state */
     transform: translate(-50%, -50%); /* Center the inner circle */
     
+}
+
+
+/* FREE FORM COMMENTARY BLOCK */
+.lol {
+    font-size: 24px;
+    font-weight: bold;
+    font-variant: small-caps;
+}
+
+.commentary_container {
+    display: flex;
+    margin-top: 30px;
+    flex-direction: column;
+    max-width: 100%;
+    padding: 25px 20px 25px 20px;
+    background-color: #fff; 
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.commentary {
+    margin-top: 20px;
+    font-size: 1rem;
+    padding: 10px;
+    border: 1px solid #ccc;
+    resize: none;
+    border-radius: 4px;
+}
+
+
+/* SUBMIT BUTTON*/
+.submit_button {
+    margin-top: 20px;
+    padding: 15px 35px;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit_button:hover {
+    background-color: #218838; /* Более темный зеленый фон при наведении */
+}
+
+.text {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    width: 100px;
+    font-size: 2rem;
+    text-indent: 20px;
+    color: rgb(117, 113, 113);
 }
