@@ -23,13 +23,46 @@
 
     <form onsubmit="submitFeedback(event)"> <!-- Обработка отправки формы -->
 
-        <div class="user_data">
-            ya znayu gde ti zivesh
+        <div class="container">
+            <div style="display: flex;">
+                <h2 style="font-size: 28px; margin: 20px 0 20px 20px;">
+                    Please, put your info
+                </h2>
+                <div style="display:flex; color: red; align-items: center; font-size: 40px;">*</div>   
+            </div>
+
+            <div class="student_data">
+                <!-- STUDENT NAME -->
+                <div>
+                    <div style="font-size: 24px; font-weight: bold; font-variant: small-caps;">Name:</div>
+                    <input type="text" id="fname" name="fname" placeholder="John" autofocus required>
+                    <div class="line"></div>
+                </div>
+                <!-- LAST NAME -->
+                <div style="margin-top: 20px;">
+                    <div style="font-size: 24px; font-weight: bold; font-variant: small-caps;">Last Name:</div>
+                    <input type="text" id="lname" name="lname" placeholder="Doe" required>
+                    <div class="line"></div>
+                </div>
+                <!-- GROUP NAME -->
+                <div style="margin-top: 20px;">
+                    <div style="font-size: 24px; font-weight: bold; font-variant: small-caps;">Your group:</div>
+                    <input type="text" id="gname" name="gname" placeholder="IT-26" required>
+                    <div class="line"></div>
+                </div>
+            </div>
         </div>
     
-        <div>
-            <div class="container">
-                <div class="rate">
+        <div class="container">
+            <div style="display: flex;">
+                <h2 style="font-size: 28px; margin: 20px 0 20px 20px;">
+                    Rate the following courses:
+                </h2>
+                <div style="display:flex; color: red; align-items: center; font-size: 40px;">*</div>
+            </div>
+
+            <div class="course_rate">
+                <div class="ratings">
                     <div>terrible</div>
                     <div>poor</div>
                     <div>average</div>
@@ -38,46 +71,46 @@
                 </div>
 
                 <div class="courses">
-                    <div>MATH</div>
-                    <div>HISTORY</div>
-                    <div>Course_1</div>
-                    <div>Course_2</div>
-                    <div>Course_3</div>
+                    <div>Math</div>
+                    <div>History</div>
+                    <div>Physics</div>
+                    <div>Chemistry</div>
+                    <div>Biology</div>
                 </div>
 
                 <div class="radio">
                     <!-- MATH -->
                         <input type="radio" name="math">
                         <input type="radio" name="math">
-                        <input type="radio" name="math">
+                        <input type="radio" name="math" required>
                         <input type="radio" name="math">
                         <input type="radio" name="math">
 
                     <!-- HISTORY -->
                         <input type="radio" name="history">
                         <input type="radio" name="history">
-                        <input type="radio" name="history">
+                        <input type="radio" name="history" required>
                         <input type="radio" name="history">
                         <input type="radio" name="history">
 
                     <!-- Course_1 -->
                         <input type="radio" name="1">
                         <input type="radio" name="1">
-                        <input type="radio" name="1">
+                        <input type="radio" name="1" required>
                         <input type="radio" name="1">
                         <input type="radio" name="1">
 
                     <!-- Course_2 -->
                         <input type="radio" name="2">
                         <input type="radio" name="2">
-                        <input type="radio" name="2">
+                        <input type="radio" name="2" required>
                         <input type="radio" name="2">
                         <input type="radio" name="2">
 
                     <!-- Course_3 -->
                         <input type="radio" name="3">
                         <input type="radio" name="3">
-                        <input type="radio" name="3">
+                        <input type="radio" name="3" required>
                         <input type="radio" name="3">
                         <input type="radio" name="3">
                 </div>
@@ -85,8 +118,8 @@
         </div>
 
         <div class="commentary_container">
-            <label class="lol" for="commentary">Your commentary (not necessarily):</label>
-            <textarea id="commentary" class="commentary" rows="5" placeholder="your opinion..."></textarea>
+            <label class="lol" for="commentary">Write your opinion about courses:</label>
+            <textarea id="commentary" class="commentary" rows="5" maxlength="500" placeholder="your opinion...(500 char max)"></textarea>
         </div>
 
         <button type="submit" class="submit_button">
