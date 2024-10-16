@@ -174,7 +174,7 @@ input[type="radio"]:checked::before {
 }
 
 .submit_button:hover {
-    background-color: #218838; /* Более темный зеленый фон при наведении */
+    background-color: #218838;
 }
 
 .text {
