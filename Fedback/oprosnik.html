@@ -7,10 +7,10 @@
     <title>Feedback Form</title>
 
     <script>
-        function submitFeedback(event) {
-            event.preventDefault(); // Отменяем стандартное поведение формы
-            window.location.href = 'thankyou.html'; // Переход на страницу благодарности
-        }
+        //function submitFeedback(event) {
+        //    event.preventDefault(); // Отменяем стандартное поведение формы
+        //    window.location.href = 'thankyou.html'; // Переход на страницу благодарности
+        //}
     </script>
 </head>
 
@@ -21,7 +21,7 @@
         <h1>Feedback</h1>
     </div>
 
-    <form onsubmit="submitFeedback(event)"> <!-- Обработка отправки формы -->
+    <form action="submit.php" method="post"> <!-- Обработка отправки формы -->
 
         <div class="container">
             <div style="display: flex;">
@@ -80,39 +80,39 @@
 
                 <div class="radio">
                     <!-- MATH -->
-                        <input type="radio" name="math">
-                        <input type="radio" name="math">
-                        <input type="radio" name="math" required>
-                        <input type="radio" name="math">
-                        <input type="radio" name="math">
+                        <input type="radio" name="math" value="terrible">
+                        <input type="radio" name="math" value="poor">
+                        <input type="radio" name="math" value="average" required>
+                        <input type="radio" name="math" value="great">
+                        <input type="radio" name="math" value="exellent">
 
                     <!-- HISTORY -->
-                        <input type="radio" name="history">
-                        <input type="radio" name="history">
-                        <input type="radio" name="history" required>
-                        <input type="radio" name="history">
-                        <input type="radio" name="history">
+                        <input type="radio" name="history" value="terrible">
+                        <input type="radio" name="history" value="poor">
+                        <input type="radio" name="history" value="average" required>
+                        <input type="radio" name="history" value="great">
+                        <input type="radio" name="history" value="exellent">
 
                     <!-- Course_1 -->
-                        <input type="radio" name="1">
-                        <input type="radio" name="1">
-                        <input type="radio" name="1" required>
-                        <input type="radio" name="1">
-                        <input type="radio" name="1">
+                        <input type="radio" name="physics" value="terrible">
+                        <input type="radio" name="physics" value="poor">
+                        <input type="radio" name="physics" value="average" required>
+                        <input type="radio" name="physics" value="great">
+                        <input type="radio" name="physics" value="exellent">
 
                     <!-- Course_2 -->
-                        <input type="radio" name="2">
-                        <input type="radio" name="2">
-                        <input type="radio" name="2" required>
-                        <input type="radio" name="2">
-                        <input type="radio" name="2">
+                        <input type="radio" name="chemistry" value="terrible">
+                        <input type="radio" name="chemistry" value="poor">
+                        <input type="radio" name="chemistry" value="average" required>
+                        <input type="radio" name="chemistry" value="great">
+                        <input type="radio" name="chemistry" value="exellent">
 
                     <!-- Course_3 -->
-                        <input type="radio" name="3">
-                        <input type="radio" name="3">
-                        <input type="radio" name="3" required>
-                        <input type="radio" name="3">
-                        <input type="radio" name="3">
+                        <input type="radio" name="biology" value="terrible">
+                        <input type="radio" name="biology" value="poor">
+                        <input type="radio" name="biology" value="average" required>
+                        <input type="radio" name="biology" value="great">
+                        <input type="radio" name="biology" value="exellent">
                 </div>
             </div>
         </div>
@@ -129,3 +129,4 @@
     </form>
 </body>
 </html>
+
