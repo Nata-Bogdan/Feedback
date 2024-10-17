@@ -20,10 +20,11 @@ $history = $_POST['history'];
 $physics = $_POST['physics'];
 $chemistry = $_POST['chemistry'];
 $biology = $_POST['biology'];
+$commentary = $_POST['commentary'];
 
 // Подготовка и выполнение SQL-запроса
-$stmt = $conn->prepare("INSERT INTO responses (fname, lname, gname, math, history, physics, chemistry, biology) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
-$stmt->bind_param("ssssssss", $fname, $lname, $gname, $math, $history, $physics, $chemistry, $biology);
+$stmt = $conn->prepare("INSERT INTO responses (fname, lname, gname, math, history, physics, chemistry, biology, commentary) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
+$stmt->bind_param("sssssssss", $fname, $lname, $gname, $math, $history, $physics, $chemistry, $biology, $commentary);
 
 if ($stmt->execute()) {
     echo "Данные успешно сохранены!";
