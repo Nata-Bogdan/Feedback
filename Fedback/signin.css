@@ -1,0 +1,125 @@
+body {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    overflow: hidden;
+}
+
+.heading {
+    display: flex;
+    margin: 30px 0 30px 0;
+    justify-content: center;
+    align-items: center;
+    font-size: 54px;
+    text-align: center;
+    color: #333;
+}
+
+.sign_in_container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-rows: 1fr 2px auto auto 1fr;
+    padding: 10px;
+    min-width: fit-content;
+    width: 50vw;
+    max-width: 400px;
+    min-height: fit-content;
+    height: 75vh;
+    max-height: 500px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.you_are {
+    display: grid;
+    margin: 50px 20px 30px 20px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.item {
+    display: grid;
+    grid-template-columns: 20px 100px;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold; 
+    font-variant: small-caps;
+}
+
+.pswrd {
+    display: flex;
+    margin: 30px 20px 40px 20px;
+    justify-self: center;
+    width: 75%;
+    height: 30px;
+}
+
+/* RADIO BUTTONS */
+:root {
+    --radio-border-color: #656565;
+    --radio-checked-color: #333;
+    --radio-size: 13px;
+    --radio-inner-size: 6px;
+}
+
+input[type="radio"] {
+    -webkit-appearance: none; /* Remove default styling in WebKit browsers */
+    appearance: none; /* Remove default styling */
+    width: var(--radio-size); /* Custom width */
+    height: var(--radio-size); /* Custom height */
+    margin: 0;
+    border: 2px solid var(--radio-border-color); /* Custom border */
+    border-radius: 50%; /* Make it circular */
+    outline: none; /* Remove outline */
+    cursor: pointer; /* Change cursor on hover */
+    position: relative; /* Position for pseudo-element */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+input[type="radio"]:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+    border-color: var(--radio-checked-color); /* Change border color on hover */
+}
+
+input[type="radio"]:checked::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: var(--radio-inner-size); /* Inner circle size */
+    height: var(--radio-inner-size); /* Inner circle size */
+    border-radius: 50%; /* Make inner circle circular */
+    background-color: var(--radio-checked-color); /* Color of the checked state */
+    transform: translate(-50%, -50%); /* Center the inner circle */
+    
+}
+
+/* SUBMIT BUTTON*/
+.submit_button {
+    margin: 0 0 30px 0;
+    padding: 15px 35px;
+    width: 150px;
+    height: 60px;
+    justify-self: center;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit_button:hover {
+    background-color: #218838;
+}
