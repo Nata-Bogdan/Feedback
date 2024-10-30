@@ -4,38 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="signin.css">
-    <title>Sign in</title>
+    <title>Sing in</title>
 
 </head>
 
 
 
 <body>
-    <form action="#" method="post">
         <div class="sign_in_container">
             <h1 class="heading">You are...</h1>
-
             <div style="width: 300px; height: 2px; background-color: #ccc;"></div>
-
             <div class="you_are">
                 <!-- STUDENT -->
                 <div class="item">
-                    <input style="display: flex; justify-content: center;" type="radio" name="user_is" value="student" required>
+                    <input style="display: flex; justify-content: center;" type="radio" id="user" name="user_is" value="student" required>
                     <div style="display: flex; justify-content: center;">STUDENT</div>
                 </div>
                 <!-- TEACHER -->
                 <div class="item">
-                    <input style="display: flex; justify-content: center;" type="radio" name="user_is" value="teacher">
+                    <input style="display: flex; justify-content: center;" type="radio" id="user" name="user_is" value="teacher">
                     <div style="display: flex; justify-content: center;">TEACHER</div>
                 </div>
             </div>
-
-            <input class="pswrd" type="password" name="pswrd" placeholder="Passw0rd" required>
-
-            <button type="submit" class="submit_button">
+            <input class="pswrd" type="password" id="pswrd" placeholder="Passw0rd" required>
+            <button type="submit" class="submit_button" onclick="password()">
                 Submit
             </button>
         </div>
-    </form>
+
+    <script>
+
+        function student () {
+            window.location.href="./oprosnik.html";
+        }
+
+
+        function teacher () {
+            window.location.href="./averadgerate.php";
+        }
+
+    </script>
 </body>
 </html>
