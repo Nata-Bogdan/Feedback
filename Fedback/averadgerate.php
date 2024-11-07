@@ -63,6 +63,17 @@
             font-weight: bold;
             font-variant: small-caps;
         }
+
+        .rate {
+            display: grid;
+            grid-template-rows: repeat(5, 1fr);
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+            font-variant: small-caps;
+        }
+        
     </style>
 </head>
 
@@ -82,7 +93,87 @@
                 <div>Chemistry</div>
                 <div>Biology</div>
             </div>
-        </div>
+            <div class="rate">
+                <?php
+                    $servername = "localhost";
+                    $username = "root";
+                    $password = "";
+                    $dbname = "oprosnik_db";
 
+                    // Подключение к базе данных
+                    $conn = new mysqli($servername, $username, $password, $dbname);
+
+                    // Проверка подключения
+                    if ($conn->connect_error) {
+                        die("Connection failed: " . $conn->connect_error);
+                    }
+
+                    // Подготовленный запрос с параметром
+                    $math = "SELECT AVG(math) AS average_math FROM responses";
+                    $resultM = $conn->query($math);
+
+                    
+
+                    if ($resultM->num_rows > 0) {
+                        $row = $resultM->fetch_assoc();
+                        $averageMath = $row["average_math"];
+                
+                        echo '<div>' . round($averageMath, 2) . '</div>';
+                    } else {
+                        echo "<p>Нет данных для вычисления среднего арифметического.</p>";
+                    }
+                    
+                    $history = "SELECT AVG(history) AS average_history FROM responses";
+                    $resultH = $conn->query($history);
+
+                    if ($resultH->num_rows > 0) {
+                        $row = $resultH->fetch_assoc();
+                        $averageHistory = $row["average_history"];
+                
+                        echo '<div>'. round($averageHistory, 2).'</div>';
+                    } else {
+                        echo "<p>Нет данных для вычисления среднего арифметического.</p>";
+                    }
+
+                    $physics = "SELECT AVG(physics) AS average_physics FROM responses";
+                    $resultP = $conn->query($physics);
+
+                    if ($resultP->num_rows > 0) {
+                        $row = $resultP->fetch_assoc();
+                        $averagePhysics = $row["average_physics"];
+                
+                        echo '<div>'. round($averagePhysics, 2).'</div>';
+                    } else {
+                        echo "<p>Нет данных для вычисления среднего арифметического.</p>";
+                    }
+
+                    $chemistry = "SELECT AVG(chemistry) AS average_chemistry FROM responses";
+                    $resultC = $conn->query($chemistry);
+
+                    if ($resultC->num_rows > 0) {
+                        $row = $resultC->fetch_assoc();
+                        $averageChemistry = $row["average_chemistry"];
+                
+                        echo '<div>'. round($averageChemistry, 2).'</div>';
+                    } else {
+                        echo "<p>Нет данных для вычисления среднего арифметического.</p>";
+                    }
+
+                    $biology = "SELECT AVG(biology) AS average_biology FROM responses";
+                    $resultB = $conn->query($biology);
+
+                    if ($resultB->num_rows > 0) {
+                        $row = $resultB->fetch_assoc();
+                        $averageBiology = $row["average_biology"];
+                
+                        echo '<div>'. round($averageBiology, 2).'</div>';
+                    } else {
+                        echo "<p>Нет данных для вычисления среднего арифметического.</p>";
+                    }
+
+                    $conn->close();  // Закрытие соединения
+                ?>
+            </div>
+        </div>
 </body>
 </html>
